@@ -50,15 +50,16 @@ body {
 }
 
 .nav a.active {
-  background-color: #04AA6D;
+  background-color: #2385fb;
   color: white;
 }
 
-.nav a:not(.active):hover {
-  background-color: #ffffff90;
-  color: black;
+.nav a:hover {
+  text-decoration: underline;
 }
-
+.nav a:not(.active):hover {
+  color: rgb(155, 199, 253);
+}
 .nav a:is(:first-child):hover {
   border-radius: 0;
 }
