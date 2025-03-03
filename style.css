@@ -37,6 +37,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   border-radius: 30px;
+  transition: transform 0.3s ease;
 }
 
 .nav a.img {
@@ -52,15 +53,20 @@ body {
 .nav a.active {
   background-color: #2385fb;
   color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav a:active {
+  transform: translateY(2px);
 }
 
 .nav a:hover {
   text-decoration: underline;
 }
 .nav a:not(.active):hover {
-  color: rgb(155, 199, 253);
+  color: #9bc7fd;
 }
 .nav a:is(:first-child):hover {
+  background-color: #9bc7fd;
   border-radius: 0;
 }
 
