@@ -10,13 +10,13 @@ body {
   padding: 40px 30px;
 }
 
-.content .header {
-  font-size: 24px;
+h1 {
+  font-size: 27px;
   font-weight: bold;
   text-align: center;
 }
 
-.content .subheader {
+h2 {
   font-size: 22px;
   font-weight: 44;
   font-style: italic;
@@ -46,10 +46,14 @@ body {
   border-radius: 30px;
   transition: transform 0.1s ease-in-out;
 }
+
 .nav a.active {
-  background-color: #2385fb;
+  background-color: #0253B6;
   color: white;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav a:active {
+  transform: translateY(2px);
 }
 
 .nav a.active::before {
@@ -57,16 +61,11 @@ body {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #2385fb;
   bottom: 0;
   left: 0;
-  transform: scaleX(0);
   transition: transform 0.3s ease;
 }
 
-.nav a.active::before {
-  transform: scaleX(1);
-}
 .nav a.img {
   float: left;
   display: block;
@@ -75,15 +74,6 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-}
-
-.nav a.active {
-  background-color: #2385fb;
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.nav a:active {
-  transform: translateY(2px);
 }
 
 .nav a:hover {
@@ -161,5 +151,5 @@ body {
 }
 
 .image-grid.overview img:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
