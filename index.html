@@ -7,14 +7,14 @@
 </head>
 <body>
   <div class="nav" id="nav-bar">
-    <a href="index.html">
+    <a href="index.html" class="always-visible">
       <img src="img/microwave-icon.png" alt="Microwave Icon">
     </a>
     <a href="index.html" class="active">Overview</a>
     <a href="survey.html">Survey</a>
     <a href="personas.html">Personas</a>
     <a href="storyboard.html">Storyboard</a>
-    <a href="javascript:void(0);" class="menu-bar" onclick="myFunction()">&#9776;</a>
+    <a href="javascript:void(0);" class="menu-bar always-visible" onclick="myFunction()">&#9776;</a>
   </div>
   <div class="content">
     <h1>Project Overview</h1>
@@ -30,12 +30,13 @@
       Finally, I created a storyboard to illustrate the experience of using the microwave from beginning to end.
     </p>
     <p>This entire process helped me understand the needs, wants and feeling of the microwave users and 
-      how to change the design to potentially improve user exeperiece.</p>
+      how to change the design to potentially improve user experiece.</p>
     <p>Below is a diagram of the microwave that had me stumped.</p>
   </div>
   <div class="image-grid overview">
-    <img src="img/microwave-diagram.png" alt="Image 1" >
-  
+    <img src="img/microwave-diagram.png" 
+    alt="Diagram of microwave on the 4th floor of the CIT" 
+    aria-label="Diagram of microwave on the 4th floor of the CIT">
   </div>
   <script src="nav-bar.js"></script>
 </body>

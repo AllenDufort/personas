@@ -5,25 +5,49 @@
   <title>Personas</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  @media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }        
+  }
+</style>
 <body>
   <div class="nav" id="nav-bar">
-    <a href="index.html">
+    <a href="index.html" class="always-visible">
       <img src="img/microwave-icon.png" alt="Microwave Icon">
     </a>
     <a href="index.html">Overview</a>
     <a href="survey.html">Survey</a>
     <a href="personas.html" class="active">Personas</a>
     <a href="storyboard.html">Storyboard</a>
-    <a href="javascript:void(0);" class="menu-bar" onclick="myFunction()">&#9776;</a>
+    <a href="javascript:void(0);" class="menu-bar always-visible" onclick="myFunction()">&#9776;</a>
   </div>
   <div class="content">
     <h1>Personas</h1>
     <p>
       I used the results of the survey plus my observations of the users to create 2 personas.
-      These personas represent some of the user types that interact with the CIT 4th floor microwave. 
+      These personas represent most common types of users that interact with the CIT 4th floor microwave. 
       This helps me understand the users' priorities and how to improve the user experience with the microwave.
     </p>
-    <p>???</p>
+    <hr>
+    <h2>Personas</h2>
+    <p>Below are the 2 personas I created based on the survey results and observations:</p>
+    <div class="image-grid">
+      <div class="image-item persona">
+        <h3>Persona 1</h3>
+        <img src="img/persona-1.png" alt="Persona 1" >
+      </div>
+      <div class="image-item persona">
+        <h3>Persona 2</h3>
+        <img src="img/persona-2.png" alt="Persona 2" >
+    </div>
+  
   </div>
   <script src="nav-bar.js"></script>
 </body>

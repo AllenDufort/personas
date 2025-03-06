@@ -5,9 +5,18 @@ body {
   font-size: 17px;
 }
 
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
 /* Page content styling */
 .content {
-  padding: 40px 30px;
+  padding: 40px;
+}
+
+img {
+  z-index: 1;
 }
 
 h1 {
@@ -17,10 +26,60 @@ h1 {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 44;
   font-style: italic;
   text-align: left;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 44;
+  font-style: bold;
+  text-align: center;
+}
+
+.image-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.image-grid .image-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+  min-width: 300px;
+  margin: 10px;
+}
+.image-grid .persona {
+  max-width: 40%;
+}
+.image-grid .image-item img{
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-grid img {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.image-grid.overview img {
+  max-width: 80%;
+  min-width: 200px;
+  width: auto;
+  height: auto;
+  /* padding: 10px; */
+  transition: transform 0.3s ease;
+}
+
+.image-item img:hover {
+  transform: scale(1.05);
+}
+.image-grid.overview img:hover {
+  transform: scale(1.15);
 }
 
 .nav a img {
@@ -34,6 +93,7 @@ h2 {
   background-color: #333333;
   width: 100%;
   position: fixed;
+  z-index: 2;
 }
 
 .nav a {
@@ -42,6 +102,7 @@ h2 {
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
+  margin: 5px;
   text-decoration: none;
   border-radius: 30px;
   transition: transform 0.1s ease-in-out;
@@ -56,100 +117,57 @@ h2 {
   transform: translateY(2px);
 }
 
-.nav a.active::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  transition: transform 0.3s ease;
-}
-
-.nav a.img {
-  float: left;
-  display: block;
-  /* color: #f2f2f2; */
-  padding: 14px 16px;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
 .nav a:hover {
   text-decoration: underline;
 }
 .nav a:not(.active):hover {
   color: #9bc7fd;
 }
-.nav a:is(:first-child):hover {
-  background-color: #9bc7fd;
-  border-radius: 0;
-}
-
 .nav .menu-bar {
   display: none;
 }
 
-@media screen and (max-width: 480px) {
-  .nav a:not(:first-child) {
-    display: none;
+
+@media screen and (max-width: 500px) {
+  /* Optionally, animate the container’s height if you want a dropdown effect */
+  .nav {
+    max-height: 60px;  /* Adjust to your default height */
+    transition: max-height 1.5s ease, opacity 1s ease;
+  }
+  .nav a {
+    float: none;
   }
   .nav a.menu-bar {
     float: right;
     display: block;
-  }
-  .nav.responsive {
-    position: relative;
-  }
-  .nav.responsive .menu-bar {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .nav.responsive a {
+  
+  /* When the menu is clicked, show the links */
+  .nav.menu-clicked {
+    max-height: 300px;  /* Adjust so that all links are visible */
+  }
+
+  .nav.menu-clicked a {
     float: none;
     display: block;
     text-align: left;
   }
-  .nav.responsive a:first-child {
-    pointer-events: none;
+
+  /* Instead of hiding via display, hide with opacity and transform */
+  .nav a:not(.always-visible) {
+    opacity: 0;
+    float: none;
+    display: block;
+    text-align: left;
+    pointer-events: none; /* Prevent accidental clicks while hidden */
+    transition: max-height 1.5s ease, opacity 1s ease;
   }
-}
-
-.image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  /* align-items: baseline; */
-  /* align-content: space-evenly; */
-}
-
-.image-grid.overview img {
-  max-width: 80%;
-  min-width: 200px;
-  width: auto;
-  height: auto;
-  padding: 10px;
-  /* background-color: #ffff55; */
-  transition: transform 0.3s ease;
-}
-
-
-.image-grid img {
-  max-width: 30%;
-  min-width: 200px;
-  width: auto;
-  height: auto;
-  margin: 10px;
-  /* background-color: #ffff55; */
-  transition: transform 0.3s ease;
-}
-
-.image-grid img:hover {
-  transform: scale(1.05);
-}
-
-.image-grid.overview img:hover {
-  transform: scale(1.15);
+  
+  .nav.menu-clicked a:not(.always-visible) {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
