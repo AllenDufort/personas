@@ -22,6 +22,7 @@ h1 {
   font-size: 27px;
   font-weight: bold;
   text-align: center;
+  margin-top:1.4em;
 }
 
 h2 {
@@ -52,7 +53,7 @@ h3 {
   margin: 10px;
 }
 .image-grid .persona {
-  max-width: 40%;
+  max-width: 45%;
 }
 .image-grid .image-item img{
   border-radius: 10px;
@@ -65,12 +66,13 @@ h3 {
   width: auto;
   height: auto;
 }
-.image-grid.overview img {
+.image-grid .overview {
   max-width: 80%;
-  min-width: 200px;
+  min-width: 300px;
   width: auto;
   height: auto;
-  /* padding: 10px; */
+}
+.image-item .overview img {
   transition: transform 0.3s ease;
 }
 
@@ -131,7 +133,7 @@ h3 {
   /* Optionally, animate the container’s height if you want a dropdown effect */
   .nav {
     max-height: 60px;  /* Adjust to your default height */
-    transition: max-height 1.5s ease, opacity 1s ease;
+    transition: max-height 1s ease, opacity 0.5s ease;
   }
   .nav a {
     float: none;
@@ -162,7 +164,7 @@ h3 {
     display: block;
     text-align: left;
     pointer-events: none; /* Prevent accidental clicks while hidden */
-    transition: max-height 1.5s ease, opacity 1s ease;
+    transition: max-height 1s ease, opacity 0.5s ease;
   }
   
   .nav.menu-clicked a:not(.always-visible) {

@@ -4,3 +4,5 @@ I consulted https://www.w3schools.com/css/css3_shadows_box.asp to learn how to d
 I consulted https://www.w3schools.com/howto/howto_js_topnav.asp to learn how to make a navigation bar.
 
 I consulted https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container to learn how to align and order objects in a flex container.
+
+I used https://www.geeksforgeeks.org/what-does-javascriptvoid0-mean/ to help make my dropdown work properly.
