@@ -10,7 +10,6 @@ img, picture, video, canvas, svg {
   max-width: 100%;
 }
 
-/* Page content styling */
 .content {
   padding: 40px;
 }
@@ -47,7 +46,7 @@ h3 {
 }
 .image-grid .image-item {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   max-width: 20%;
   min-width: 300px;
   margin: 10px;
