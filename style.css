@@ -82,13 +82,6 @@ h3 {
 .image-grid.overview img:hover {
   transform: scale(1.15);
 }
-
-.nav a img {
-  display: block;
-  width: auto;
-  height: 17px;
-}
-
 .nav {
   overflow: hidden;
   background-color: #333333;
@@ -103,10 +96,16 @@ h3 {
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
-  margin: 5px;
+  /* margin: 2px; */
   text-decoration: none;
   border-radius: 30px;
   transition: transform 0.1s ease-in-out;
+}
+
+.nav a img {
+  display: block;
+  width: auto;
+  height: 17px;
 }
 
 .nav a.active {
@@ -115,7 +114,7 @@ h3 {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .nav a:active {
-  transform: translateY(2px);
+  transform: translateY(5px);
 }
 
 .nav a:hover {
@@ -129,7 +128,7 @@ h3 {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   /* Optionally, animate the container’s height if you want a dropdown effect */
   .nav {
     max-height: 60px;  /* Adjust to your default height */
