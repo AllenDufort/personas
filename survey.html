@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" description="Personas and Storyboards"/>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"
+    description="Personas and Storyboards" />
   <title>Survey</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <body>
-  <div class="nav" id="nav-bar">
-    <a href="index.html" class="always-visible">
-      <img src="img/microwave-icon.png" alt="Microwave Icon">
-    </a>
-    <a href="index.html">Overview</a>
-    <a href="survey.html" class="active">Survey</a>
-    <a href="personas.html">Personas</a>
-    <a href="storyboard.html">Storyboard</a>
-    <a href="conclusion.html">Conclusion</a>
-    <a href="javascript:void(0);" class="menu-bar always-visible" onclick="myFunction()">&#9776;</a>
-  </div>
-  <div class="content">
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html" style="font-weight: bold;">
+        Personas and Storyboards
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mt-2 mb-lg-0 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="survey.html">Survey</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="personas.html">Personas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="storyboard.html">Storyboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="conclusion.html">Conclusion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
     <h1>Survey Details</h1>
     <p>
-      I first surveyed 3 people who were using the microwave in the 4th floor of the CIT. 
+      I first surveyed 3 people who were using the microwave in the 4th floor of the CIT.
       I then collected their responses and observed their interactions with the microwave.
       Here are the results of the survey and observations:
     </p>
@@ -40,7 +68,7 @@
       </ul>
       <li>Two interviewees mistakenly used the “Timer” instead of “Add Time” button.</li>
       <ul>
-        <li>“Add Time” sets the time you want the food to cook, and 
+        <li>“Add Time” sets the time you want the food to cook, and
           “Timer” creates a countdown clock that does not activate the microwave.</li>
       </ul>
     </ul>
@@ -53,25 +81,29 @@
       </li>
       <li>
         <b>How often do you use the microwave?</b>
-        <p><i>Response:</i> Two of the interviewees use the microwave multiple times a week. 
+        <p><i>Response:</i> Two of the interviewees use the microwave multiple times a week.
           One interviewee uses the microwave a few times a month.</p>
       </li>
       <li>
         <b>Is the microwave easier or harder to use than other microwaves? Why?</b>
-        <p><i>Response:</i> All interviewees reported that the microwave is harder to use than other microwaves because of the auto-lock feature. 
-          They found the microwave unintuitive because you had to press 0 after heating the food to unlock the microwave.</p>
+        <p><i>Response:</i> All interviewees reported that the microwave is harder to use than other microwaves because
+          of the auto-lock feature.
+          They found the microwave unintuitive because you had to press 0 after heating the food to unlock the
+          microwave.</p>
       </li>
       <li>
         <b>Did you have any trouble with the microwave the first time you used it?</b>
-        <p><i>Response:</i> The first time the interviewees used the microwave, they struggled to open the door and had to figure out how to unlock it.
-        They also were confused by the “Timer” and “Add Time” buttons.</Time></p>
+        <p><i>Response:</i> The first time the interviewees used the microwave, they struggled to open the door and had
+          to figure out how to unlock it.
+          They also were confused by the “Timer” and “Add Time” buttons.</Time></p>
       </li>
       <li>
         <b>Would you change anything about the microwave?</b>
-        <p><i>Response:</i> Interviewees said they would remove the auto-lock feature and make the instructions for unlocking the microwave more obvious.</p>
+        <p><i>Response:</i> Interviewees said they would remove the auto-lock feature and make the instructions for
+          unlocking the microwave more obvious.</p>
       </li>
     </ol>
   </div>
-  <script src="nav-bar.js"></script>
 </body>
+
 </html>

@@ -1,173 +1,56 @@
-body {
-  font-family: "Gill Sans", sans-serif;
-  margin: 0;
-  padding: 0;
-  font-size: 17px;
-}
-
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-.content {
-  padding: 40px;
-}
-
-img {
-  z-index: 1;
+* {
+  font-family: Courier, monospace, Arial, sans-serif !important;
 }
 
 h1 {
-  font-size: 27px;
-  font-weight: bold;
-  text-align: center;
-  margin-top:1.4em;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 44;
-  font-style: italic;
-  text-align: left;
+  text-decoration: underline;
 }
 
 h3 {
-  font-size: 20px;
-  font-weight: 44;
-  font-style: bold;
-  text-align: center;
+  font-style: italic;
+  font-size: small !important;
+}
+a.nav-link {
+  color: #000;
+  padding: 8px;
 }
 
-.image-grid {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.image-grid .image-item {
-  display: flex;
-  flex-flow: column;
-  max-width: 20%;
-  min-width: 300px;
-  margin: 10px;
-}
-.image-grid .persona {
-  max-width: 45%;
-}
-.image-grid .image-item img{
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+.nav-link:hover {
+  text-decoration: underline;
+  color: #000;
 }
 
-.image-grid img {
-  position: relative;
-  width: auto;
-  height: auto;
-}
-.image-grid .overview {
-  max-width: 80%;
-  min-width: 300px;
-  width: auto;
-  height: auto;
-}
-.image-item .overview img {
-  transition: transform 0.3s ease;
+.navbar {
+  background-color: #ffa;
 }
 
-.image-item img:hover {
+.navbar-toggler {
+  border-color: #fff;
+}
+
+.nav-item .nav-link.active {
+  background-color: #bb8;
+  border-radius: 5px;
+  color: #000;
+}
+
+img {
+  transition: transform 0.3s; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+img:hover {
   transform: scale(1.05);
 }
-.image-grid.overview img:hover {
-  transform: scale(1.15);
-}
-.nav {
-  overflow: hidden;
-  background-color: #333333;
-  width: 100%;
-  position: fixed;
-  z-index: 2;
+img.d-block:hover {
+  transform: none;
 }
 
-.nav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  /* margin: 2px; */
-  text-decoration: none;
-  border-radius: 30px;
-  transition: transform 0.1s ease-in-out;
+body {
+  font-size: 20px !important;
 }
 
-.nav a img {
-  display: block;
-  width: auto;
-  height: 17px;
-}
-
-.nav a.active {
-  background-color: #0253B6;
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.nav a:active {
-  transform: translateY(5px);
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-.nav a:not(.active):hover {
-  color: #9bc7fd;
-}
-.nav .menu-bar {
-  display: none;
-}
-
-
-@media screen and (max-width: 620px) {
-  /* Optionally, animate the container’s height if you want a dropdown effect */
-  .nav {
-    max-height: 60px;  /* Adjust to your default height */
-    transition: max-height 1s ease, opacity 0.5s ease;
-  }
-  .nav a {
-    float: none;
-  }
-  .nav a.menu-bar {
-    float: right;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  /* When the menu is clicked, show the links */
-  .nav.menu-clicked {
-    max-height: 300px;  /* Adjust so that all links are visible */
-  }
-
-  .nav.menu-clicked a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
-  /* Instead of hiding via display, hide with opacity and transform */
-  .nav a:not(.always-visible) {
-    opacity: 0;
-    float: none;
-    display: block;
-    text-align: left;
-    pointer-events: none; /* Prevent accidental clicks while hidden */
-    transition: max-height 1s ease, opacity 0.5s ease;
-  }
-  
-  .nav.menu-clicked a:not(.always-visible) {
-    opacity: 1;
-    pointer-events: auto;
-  }
+.container {
+  width: 70% !important;
+  min-width: 310px;
+  margin: 0 auto;
 }
