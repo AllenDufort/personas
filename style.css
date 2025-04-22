@@ -21,7 +21,7 @@ a.nav-link {
 }
 
 .navbar {
-  background-color: #ffa;
+  background-color: #acf;
 }
 
 .navbar-toggler {
@@ -29,7 +29,7 @@ a.nav-link {
 }
 
 .nav-item .nav-link.active {
-  background-color: #bb8;
+  background-color: #59f;
   border-radius: 5px;
   color: #000;
 }
