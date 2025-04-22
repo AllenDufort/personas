@@ -35,14 +35,14 @@ a.nav-link {
 }
 
 img {
-  transition: transform 0.3s; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
-img:hover {
-  transform: scale(1.05);
+
+.image-container {
+  transition: transform 0.3s;
 }
-img.d-block:hover {
-  transform: none;
+.image-container:hover {
+  transform: scale(1.05);
 }
 
 body {
